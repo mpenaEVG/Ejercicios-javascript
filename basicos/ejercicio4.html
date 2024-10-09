@@ -1,0 +1,25 @@
+<!DOCType html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ejercicio4</title>
+  </head>
+  <body>
+
+    <script>
+      let numero = parseint(prompt("introduzca su año de nacimiento"));
+      if(numero!=null && !isnan(numero)){
+        if(numero >= 1925 && numero <= 2024){
+          let edad = 2024 - numero;
+          alert("tu edad es " + edad);
+        }else{
+          alert("introduce una fecha adecuada");
+        }
+      }else{
+        alert("introduce una fecha");
+      }
+    </script>
+  
+  </body>
+</html>

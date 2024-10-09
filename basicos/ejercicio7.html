@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio7</title>
+  </head>
+  <body>
+    <script>
+
+      let input = "";
+      let numeros = [];
+
+      while(input.toLowerCase() !='stop'){
+
+        input = prompt("introduce numero: ");
+        
+        if(input !='stop'){
+        numeros.push(parseInt(input));  
+       }
+      }
+
+      alert(numeros);
+
+      function encontrarmayor(array){
+        let mayor = 0;
+
+        for(let i = 0;i<array.length;i++){
+          if(array[i]>mayor){
+            mayor = array[i];
+          } 
+        }
+        return mayor;
+      }
+
+      alert(encontrarmayor(numeros));
+    </script>
+  
+  </body>
+</html>

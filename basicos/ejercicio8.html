@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio8</title>
+  </head>
+  <body>
+    <script>
+      
+      let cadena = prompt("Introduce palabra: ");
+      let cadenaReves = "";
+      alert(reversa(cadena));
+      
+
+      function reversa(cadena){
+        for(let i = cadena.length-1; i>=0;i--){
+            cadenaReves += cadena[i];
+        }
+        return cadenaReves;
+
+      }
+      let longitud = cadena.length -1;
+
+      if(palindromoRecursivo(cadena,0,longitud)){
+        alert("Es palíndromo");
+      }else{
+        alert("No es palíndromo");
+      }
+
+      function palindromoRecursivo(cadena,inicio,longitud){
+        if(longitud < 0){
+          return true;
+        }
+        if(cadena[inicio] !== cadena[longitud]){
+          return false;
+        }
+        return palindromoRecursivo(cadena, inicio+1, longitud-1);
+      }
+   </script>
+  
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio10</title>
+  </head>
+  <body>
+    <script>
+
+
+    let numero1 = parseInt(prompt("Introduce numero1 :"));
+    let numero2 = parseInt(prompt("Introduce numero2 :"));
+    let operacion = prompt("Introduce operacion");
+    
+    if((numero1 != null && !isNaN(numero1)) && (numero2 != null && !isNaN(numero2))){
+        
+        alert(Calculadora(numero1,numero2,operacion));
+    }else{
+      alert("Error introduce numeros válidos");
+    }
+    function Calculadora(numero1, numero2, operacion){
+      switch(operacion){
+        case 'sumar': 
+          return numero1 + numero2;
+        case 'restar': 
+          return numero1 - numero2;
+        case 'multiplicar': 
+          return numero1 * numero2;
+        case 'dividir': 
+          return numero1 / numero2;
+        default: 
+          return "Error introduce un operador adecuado";
+      }
+    }
+   </script>
+  
+  </body>
+</html>
