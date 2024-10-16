@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <script>
+      alert("Programa que lee sueldos e informa cuántos empleados cobran entre 100 y 300 euros y cuantos cobran más de 300. Además del total de los sueldos")
+       
+      let empleados=[['Mauri',250], ['Pablo',200], ['Hugo', 350], ['Joseluis',1000]]
+      let suma = 0
+      
+      for(let i=0;i<empleados.length;i++){
+        
+        suma +=empleados[i][1]
+
+        if(empleados[i][1] >100 && empleados[i][1]<300){
+          alert("El empleado "+empleados[i][0]+" cobra entre 100 y 300 euros")
+        }else if(empleados[i][1]>300){
+          alert("El empleado "+empleados[i][0]+" cobra más de 300 euros")
+        }else{
+            alert("Este empleado cobra una mierda")
+        }
+      }
+
+      alert("El total de salarios que paga la empresa asciende a "+suma)
+    </script>
+  
+  </body>
+</html>

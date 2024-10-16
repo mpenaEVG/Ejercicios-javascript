@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 7</title>
+  </head>
+  <body>
+    <script>
+      alert("Programa que lee dos vectores con datos y elige cual tiene mayor valor acumulado")
+
+      let vector1 = [1,3,5]
+      let vector2 = [3,3,2]
+      let suma1 = 0
+      let suma2 = 0
+
+      for(let i=0;i<vector1.length;i++){
+        suma1+=vector1[i]
+        suma2+=vector2[i]
+      }
+
+      alert(cualEsMayor(suma1,suma2))
+
+      function cualEsMayor(suma1,suma2){
+        if(suma1 > suma2){
+          return "El vector 1 tiene mayor valor acumulado que el vector 2"
+        }else if(suma1 < suma2){
+          return "El vector 2 tiene mayor valor acumulado que el vector 1"
+        }else{
+          return "Ambos vectores tienen el mismo valor"
+        }
+
+      }
+    </script>
+  </body>
+</html>
