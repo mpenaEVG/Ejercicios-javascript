@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+      <h1>Numero Menor<h1>
+      
+      <script>
+
+        let numero1 = parseInt(prompt("Introduce numero 1: "))
+        let numero2 = parseInt(prompt("Introduce numero 2: "))
+        let numero3 = parseInt(prompt("Introduce numero 3: "))
+
+        if((numero1 != null && !isNaN(numero1)) && (numero2 != null && !isNaN(numero2)) && (numero3 != null && !isNaN(numero3))){
+        
+            alert(Menores(numero1,numero2,numero3))
+          
+        }else{
+
+          alert("Error introduce numeros válidos")
+
+        }
+
+
+        function Menores(numero1,numero2,numero3){
+
+           if(numero1<numero2 && numero1<numero3){
+
+            return "El menor es " + numero1
+
+          }else if(numero2<numero1 && numero2<numero3){
+
+            return "El menor es " + numero2
+
+          }else if(numero3<numero1 && numero3<numero2){
+
+            return "El menor es " + numero3
+
+          }else{
+
+            return "Son todos iguales"
+
+          }
+        }
+
+       </script>
+  </body>
+</html>

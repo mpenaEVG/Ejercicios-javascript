@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script>
+      const MESES = [
+        ["Enero", 1],
+        ["Febrero", 2],
+        ["Marzo", 3],
+        ["Abril", 4],
+        ["Mayo", 5],
+        ["Junio", 6],
+        ["Julio", 7],
+        ["Agosto", 8],
+        ["Septiembre", 9],
+        ["Octubre", 10],
+        ["Noviembre", 11],
+        ["Diciembre", 12]
+        ];    
+      
+      let mes = prompt("Introduce mes: ");
+
+      alert(cuatrimestre(mes,MESES));
+      
+      function cuatrimestre(mes,MESES){
+        let numeromes;
+            
+        for(let i=0;i<MESES.length;i++){
+            
+          if(MESES[i][0].toLowerCase() === mes.toLowerCase()){
+            numeromes = MESES[i][1];
+            break;
+          }
+        }
+        if(numeromes){
+            if(numeromes<4){
+              return mes + " pertenece al primer cuatrimestre";
+            }else if(numeromes>4 && numeromes<8){
+              return mes + " pertenece al segundo cuatrimestre";
+            }else{
+              return mes + " pertenece al tercer cuatrimestre";
+            }
+        }
+      }
+      </script>
+  
+  </body>
+</html>

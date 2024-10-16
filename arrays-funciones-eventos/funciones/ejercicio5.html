@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script>
+      let numero = prompt("Introduce numero: ");
+
+      alert(digitos(numero));
+      
+      function digitos(numero){
+        let contador = 0;
+        for(let i = 0; i<numero.length;i++){
+          contador++;
+        }
+        return contador;
+      }
+    
+    </script> 
+  </body>
+</html>

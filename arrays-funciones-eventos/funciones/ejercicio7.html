@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 7</title>
+  </head>
+  <body>
+    <script>
+      let numeros = [];
+      alert("Elige 5 numeros para sumarlos");
+
+      numeros.push(+prompt("Introduce primer numero: "));
+      numeros.push(+prompt("Introduce segundo numero: "));
+      numeros.push(+prompt("Introduce tercer numero: "));
+      numeros.push(+prompt("Introduce cuarto numero: "));
+      numeros.push(+prompt("Introduce quinto numero: "));
+    
+      alert(suma(numeros));
+
+      function suma(numeros){
+        let sumatorio = 0;
+        for(let i=0;i<numeros.length;i++){
+          
+          sumatorio +=numeros[i];
+        }
+        return sumatorio;
+      }
+
+      </script>
+  
+  </body>
+</html>
