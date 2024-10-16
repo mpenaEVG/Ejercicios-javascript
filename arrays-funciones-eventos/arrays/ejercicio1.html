@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+      alert("Ejercicio 1, solicita la carga de 10 numeros e imprime la suma de los 5 ultimos");
+
+      let numeros = [];
+      
+      for(let i=0;i<11;i++){
+        numeros.push(+prompt("Introduce numero "+i));  
+      } 
+
+      let suma = 0;
+
+      for(let i=numeros.length-1;i>4;i--){
+        suma +=numeros[i];
+      }
+      
+      alert(suma);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 2</title>
+  </head>
+  <body>
+    <script>
+      alert("Programa que lee 10 notas de alumnos y nos informa cuantos han suspendido o aprobado: ");
+      let notas = [];
+      let suspensos = 0;
+      let aprobados = 0;
+      for(let i = 0;i<10;i++){
+          notas.push(+prompt("Introduce nota de alumno "+i));
+      }
+      for(let i =0;i<notas.length;i++){
+        if(notas[i]<5){
+          alert("El alumno "+i+" ha suspendido");
+          suspensos++;
+        }else if(notas[i]>=5){
+          alert("El alumno "+i+" ha aprobado")
+          aprobados++
+        }
+      }
+
+      alert("Han suspendido "+suspensos+" alumnos y han aprobado "+aprobados+" alumnos");
+    </script>
+  </body>
+</html>

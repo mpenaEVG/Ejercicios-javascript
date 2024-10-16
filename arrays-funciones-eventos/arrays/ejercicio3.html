@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 3</title>
+  </head>
+  <body>
+    <script>
+        alert("Se ingresan 5 alturas, mostra la altura promedio");
+        let alturas = [];
+        for(let i = 0;i<5;i++){
+          alturas.push(+prompt("Introduce altura de persona "+i))
+        }
+        let suma = 0;
+        for(let i=0;i<alturas.length;i++){
+          suma +=alturas[i]
+        }
+        alert(suma/alturas.length)
+
+    </script>
+  </body>
+</html>
