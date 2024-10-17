@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 9</title>
+  </head>
+  <body>
+    <script>
+      let a = true
+      let clientes = []
+
+          while(a){
+            
+              let nombreCliente = prompt("Ingresa nombre de cliente")
+              let saldoCuenta = +prompt("Ingresa saldo de la cuenta")
+              
+              clientes.push({ nombre: nombreCliente, saldo: saldoCuenta });   
+              
+              if(saldoCuenta < 0){
+                a = false;
+              }
+             
+            }
+      
+      let mensaje="Apartado a) \n Cuenta, nombre del cliente y estado de la cuenta:\n"
+
+      clientes.forEach((cliente,index)=>{
+        let estadoCuenta = cliente.saldo == 0 ? 'Nulo' : cliente.saldo > 0 ? 'Acreedor' : 'Deudor'
+        mensaje += "Cliente: "+cliente.nombre+", Nº de cuenta: "+(index+1)+", Saldo: "+cliente.saldo+", Estado: "+estadoCuenta+"\n"
+      })
+      alert(mensaje)
+  
+      let suma = 0
+
+      for(let i=0;i<clientes.length;i++){
+        if(clientes[i].saldo>0){
+          suma += clientes[i].saldo
+        }
+      }
+
+      alert("El resultado total de los saldos acreedores es "+suma)
+    </script>
+  </body>
+</html>

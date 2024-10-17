@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 10</title>
+  </head>
+  <body>
+    <script>
+   // let censo = [{nombre:'Mauri',sexo:'Masculino'},{nombre:'Marina',sexo:'Femenino'}]
+    let a = true
+   let censo = []
+   while(a){
+      let nombreCiudadano = prompt("Introduzca nombre: ")
+       let edadCiudadano = +prompt("Introduzca edad: ")
+       let sexoCiudadano = prompt("Introduzca sexo: ").toLowerCase()
+       if (nombreCiudadano && sexoCiudadano && edadCiudadano > 0) {
+            censo.push({
+                nombre: nombreCiudadano,
+                sexo: sexoCiudadano,
+                edad: edadCiudadano
+            })
+        } else {
+            a = false
+        } 
+  }
+    alert("Cantidad de personas censadas: "+censo.length)
+ 
+    let numeroMujeres = 0
+    let numeroHombres = 0
+    let entre16y65 = 0
+
+    for(let i=0;i<censo.length;i++){
+       if(censo[i].sexo == 'femenino'){
+        numeroMujeres++
+       }else if(censo[i].sexo== 'masculino'){
+          numeroHombres++
+           if(censo[i].edad>=16 && censo[i].edad<=65){
+                entre16y65++
+            }
+       }
+    }
+    
+   alert("Cantidad de varones: "+numeroHombres+"\n Cantidad de mujeres: "+numeroMujeres+"\n Cantidad de varones entre 16 y 65: "+entre16y65) 
+    
+
+    </script>
+  </body>
+</html>

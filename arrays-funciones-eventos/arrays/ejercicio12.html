@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 12</title>
+  </head>
+  <body>
+    <script>
+      let estudiantesManiana = [14,15,13,20,21]
+      let estudiantesTarde = [30,20,50,10]
+      let estudiantesNoche = [60,20,20,14]
+    
+      function promedio(array){
+        let media = 0
+        let sumaedades = 0
+        for(let i=0;i<array.length;i++){
+            sumaedades += array[i]
+        }
+        media = sumaedades/array.length
+        return media
+      }
+
+
+      alert("Turno mañana: "+promedio(estudiantesManiana)+"\n Turno tarde: "+promedio(estudiantesTarde)+"\n Turno noche: "+promedio(estudiantesNoche))
+
+      if(promedio(estudiantesManiana)>promedio(estudiantesTarde) && promedio(estudiantesManiana)>promedio(estudiantesNoche)){
+        alert("El turno de mañana tiene la media de mayor edad")
+      }else if(promedio(estudiantesTarde)>promedio(estudiantesManiana) && promedio(estudiantesTarde)>promedio(estudiantesNoche)){
+        alert("El turno de tarde tiene la media de mayor edad")
+      }else{
+        alert("El turno de noche tiene la media de mayor edad")
+      }
+    </script>
+  </body>
+</html>

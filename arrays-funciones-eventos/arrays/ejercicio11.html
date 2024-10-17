@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 11</title>
+  </head>
+  <body>
+    <script>
+      let numeros = []
+      for(let i=0;i<10;i++){
+        numeros.push(+prompt("Introduce numero "+(i+1)+": "))
+      }
+
+      let numerosNegativos = 0
+      let numerosPositivos= 0 
+      let multiplosde15 = 0
+      let valorPares = 0
+
+      for(let i=0;i<numeros.length;i++){
+        if(numeros[i]>0){
+          numerosPositivos++
+          if(numeros[i]%15 == 0){
+            multiplosde15++
+          }else if(numeros[i]%2 == 0){
+            valorPares += numeros[i]
+          }
+        }else{
+          numerosNegativos++
+        }
+      }
+
+      alert("Numeros positivos: "+numerosPositivos+"\n Numeros negativos: "+numerosNegativos+"\n Múltiplos de 15: "+multiplosde15+"\n Valor de todos los pares: "+valorPares)
+
+    </script>
+  </body>
+</html>
