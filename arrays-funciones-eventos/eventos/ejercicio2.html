@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 2</title>
+
+   <script>
+
+    function warning(){
+      console.log("La contraseña tiene que tener más de 7 dígitos y menos de 20")
+    }
+    function validar(){
+
+      let psswd = document.getElementById('password').value
+      let longitud = psswd.length
+
+     if(psswd != null && psswd !== ""){
+         alert(psswd)
+         alert(longitud)
+ 
+        if(longitud<7){
+          console.log("Tu contraseña tiene "+longitud+", no esta permitido menos de 7")
+        }else if(longitud>20){
+          console.log("Tu contraseña tiene "+longitud+", no esta permitido más de 20")
+        }else{
+          console.log("Tu contraseña tiene "+longitud+" está dentro de los límites")
+        }
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+      <input type=text name=nombre required>
+      <input type=password id=password onfocus=warning() onblur=validar() required>
+    </br>
+    </br>
+    <input type=submit value=enviar>
+
+  </body>
+</html>
