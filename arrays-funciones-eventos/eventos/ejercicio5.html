@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 3</title>
+    <script>
+        function eventoEnviar(){
+
+          const FECHA = new Date()
+          let dia = FECHA.getDate()
+          let mes = FECHA.getMonth() + 1 
+          let año = FECHA.getFullYear()
+          
+          let fecha = dia +"/"+ mes+"/"+ año
+    
+          window.open("","_blank").document.write("<h1>"+fecha+"</h1>")
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick=eventoEnviar() name=enviar>Enviar</button>
+  </body>
+</html>

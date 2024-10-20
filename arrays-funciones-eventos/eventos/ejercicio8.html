@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ejercicio 8</title>
+      <script>
+        function colorear(color){
+          let div = document.getElementById('unico')
+          div.style.backgroundColor = color
+        }
+      </script>
+    <style>
+      div{
+        width: 400px;
+        height: 400px;
+        background-color: red;
+    }
+    </style>
+  </head>
+  <body>
+    <div id=unico onmousedown="colorear('yellow')" onmouseup="colorear('red')">
+    
+    </div>
+  </body>
+</html>

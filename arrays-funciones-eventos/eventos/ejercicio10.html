@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 2</title>
+  <style>
+   #confirmButton{
+    display: none;
+    }
+  </style>
+   <script>
+    function activarBoton(checkbox){
+      let boton = document.getElementById('confirmButton')
+      boton.style.display = checkbox.checked ? 'block' : 'none'
+    }
+    </script>
+  </head>
+  <body>
+    <label>
+        <input type="checkbox" id=terminos onchange="activarBoton(this)">
+        Acepta términos y condiciones
+    </label>
+    </br>
+      <button id=confirmButton>Continuar</button>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 3</title>
+    <style>
+      #rojo{
+        background-color: none;
+        width: 100px;
+      }
+      #verde{
+        background-color: none;
+        width: 100px;
+      }
+      #azul{
+        background-color: none;
+        width: 100px;
+      }
+    </style>
+    <script>
+    function resaltar(id,color){
+       document.getElementById(id).style.backgroundColor = color
+    }
+
+    function normal(id){
+       document.getElementById(id).style.backgroundColor = 'transparent'
+    }
+
+    function abrirGmail(url){
+      window.location.href = url;
+    }
+    </script>
+  </head>
+  <body>
+    <a onclick="abrirGmail('https://mail.google.com')"> <h2 id=rojo onmouseout="normal('rojo')" onmouseover="resaltar('rojo','red')">Rojo</h2></a>
+    <h2 id=azul onmouseout="normal('azul')" onmouseover="resaltar('azul','blue')">Azul</h2>
+    <h2 id=verde onmouseout="normal('verde')" onmouseover="resaltar('verde','green')">Verde</h2>
+  </body>
+</html>

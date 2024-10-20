@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ejercicio 8</title>
+      <script>
+        function colorear(colorLetra,colorFondo){
+          let titulo = document.getElementById('titulo')
+          titulo.style.backgroundColor = colorFondo
+          titulo.style.color= colorLetra 
+        }
+      </script>
+    <style>
+      titulo{
+        color:black;
+        background-color: yellow;
+    }
+    </style>
+  </head>
+  <body>
+    <div id=unico onmouseover="colorear('red','yellow')" onmouseout="colorear('black','transparent')">
+      <h1 id=titulo>Hola Juan Carlos</h1>
+    </div>
+  </body>
+</html>
