@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 11</title>
+  </head>
+  <script>'use strict';
+
+  function convertir(){
+    let euros = parseFloat(document.getElementById('euro').value)
+    let pesetas = parseFloat(document.getElementById('peseta').value)
+
+    if(!isNaN(euros) & euros>0){
+      pesetas=euros * 166.368
+      document.getElementById('peseta').value = pesetas.toFixed(2);
+    }else if(!isNaN(pesetas)){
+      euros=pesetas/166.368
+      document.getElementById('euro').value = euros.toFixed(2);
+    }
+  }
+
+  function limpiar(){
+
+      document.getElementById('peseta').value = "";
+      document.getElementById('euro').value = "";
+
+  }
+  </script>
+  <body>
+    <h1>Conversor Euros/Pesetas</h1>
+    <label>Euros</label>
+    <input type=text id=euro >
+    </br>
+    </br>
+    </br>
+    <label>Pesetas</label>
+    <input type=text id=peseta>
+    </br>
+    </br>
+    <input type=submit value=Convertir onclick=convertir()>
+    <input type=reset value=limpiar onclick=limpiar()>
+  </body>
+</html>
