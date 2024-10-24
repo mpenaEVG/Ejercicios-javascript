@@ -5,57 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejercicio 13</title>
   </head>
-  <style>
-  #div1{
-    width: 300px;
-    height: 300px;
-    background-color: red;
-  }
-  #div2{
-    width: 300px;
-    height: 300px;
-    background-color: blue;
-  }
-  #div3{
-    width: 300px;
-    height: 300px;
-    background-color: green;
-  }
-  </style>
-  <script>'use strict';
-
-      function borrar(idDiv,idEnlace){
-        let div = document.getElementById(idDiv)
-        let enlace = document.getElementById(idEnlace)
-        if(div.style.backgroundColor === 'transparent'){
-          if(idDiv === 'div1'){
-            div.style.backgroundColor = 'red'
-            enlace.textContent = 'Div 1'
-          }else if(idDiv === 'div2'){
-            div.style.backgroundColor = 'blue'
-            enlace.textContent = 'Div 2'
-          }else if(idDiv === 'div3'){
-            div.style.backgroundColor = 'green'
-            enlace.textContent = 'Div 3'
-          }
-        }else{
-           div.style.backgroundColor = 'transparent'
-            enlace.textContent = 'Oculto'
-        }
-      }
-  </script>
   <body>
-    <ul>
-      <li><a href=#div1 id=1 onclick="borrar('div1',1)">Div 1</a></li>
-      <li><a href=#div2 id=2 onclick="borrar('div2',2)">Div 2</a></li>
-      <li><a href=#div3 id=3 onclick="borrar('div3',3)">Div 3</a></li>
-      </br>
-      <div id=div1>
-      </div>
-      <div id=div2>
-      </div>
-      <div id=div3>
-      </div>
-    </ul>
+    <h1>Evento de Ratón y Teclado</h1>
+    <div id=info></div>
+  <script>
+      function mostrarInformacion(mensaje){
+        let info = document.getElementById("info")
+        info.textContent = mensaje
+      }
+      window.addEventListener('mousemove',(evento)=>{
+        let mensaje = `Ratón - Posición en ventana: (${evento.clientX}, ${evento.clientY}), Posición en página: (${evento.pageX}, ${evento.pageY})`
+        mostrarInformacion(mensaje)
+      })
+      window.addEventListener('keydown',(evento)=>{
+        let mensaje = `Tecla pulsada - Código: ${evento.code}, Tecla: ${evento.key}`
+        mostrarInformacion(mensaje)
+      })
+  </script>
   </body>
 </html>
