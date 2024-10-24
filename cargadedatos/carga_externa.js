@@ -1,5 +1,6 @@
 'use strict'
-
+/*Intruccion para que se espere que este cargado el documento (porque he puesto el script 
+en el head)*/
 document.addEventListener('DOMContentLoaded', () => {
     cargarDatosConFetch();
 });
@@ -19,6 +20,10 @@ function cargarDatosConFetch(){
       let empleados = cargarDatos(data)
       console.log(empleados)
       mostrarDatos(empleados)
+      empleados = addEmpleado(empleados)
+      empleados = removeEmpleado(empleados)
+      let idEmpleado= prompt("Introduce empleado a buscar: ")
+      buscarEmpleado(idEmpleado)
     })
 
    .catch (error=>{

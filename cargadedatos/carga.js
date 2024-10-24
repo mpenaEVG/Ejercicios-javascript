@@ -118,6 +118,7 @@ function addEmpleado(listaEmpleados){
         }
       listaEmpleados.push(nuevoEmpleado)
     }
+  return listaEmpleados
 }
 
 function removeEmpleado(listaEmpleados){
