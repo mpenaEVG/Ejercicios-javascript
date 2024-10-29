@@ -1,6 +1,6 @@
 'use strict'
 
-ejercicio9('1900','1997-05-20')
+ejercicio15('1997-05-20')
 function ejercicio1(anio){
   const ahora = new Date()
   const fechaDada = new Date(anio,0,1)
@@ -162,4 +162,74 @@ function ejercicio9(anio,fecha){
   console.log(`Han pasado un total de ${dias} dias`)
   
 
+}
+
+function ejercicio10(anio1,anio2){
+
+  const fecha1 = new Date(anio1)
+  const fecha2 = new Date(anio2)
+
+  if(fecha1>fecha2){
+    return `${fecha1.toLocaleDateString()} es posterior a ${fecha2.toLocaleDateString()}`
+  }else{
+    
+    return `${fecha2.toLocaleDateString()} es posterior a ${fecha1.toLocaleDateString()}`
+  }
+}
+
+function ejercicio11(anio){
+    const fechaDada = new Date(anio)
+    const fechaModificar = new Date(anio)
+    fechaModificar.setDate(1)
+    
+    let diferencia = fechaDada -fechaModificar
+    let diasDiferencia = Math.floor(diferencia/(1000 * 60 * 60 * 24))
+    console.log("Hay "+diasDiferencia+" dias de diferencia")
+}
+
+function ejercicio12(anio){
+    const fecha = new Date(anio)
+    let dia = fecha.getDate()
+    let mes = fecha.getMonth() + 1
+    let anyo = fecha.getFullYear()
+
+    let fechaGuay = anyo+"-"+mes+"-"+dia
+    console.log(fechaGuay)
+}
+
+function ejercicio13(anio){
+  const ahora = new Date()
+  const dada = new Date(anio)
+
+  let diferencias = ahora - dada 
+  let minutosDiff = Math.floor(diferencias/(1000*60))
+  console.log("Han pasado "+minutosDiff+" minutos")
+}
+function ejercicio15(anio){
+const nombresMeses = [
+    "January",   // 0
+    "February",  // 1
+    "March",     // 2
+    "April",     // 3
+    "May",       // 4
+    "June",      // 5
+    "July",      // 6
+    "August",    // 7
+    "September", // 8
+    "October",   // 9
+    "November",  // 10
+    "December"   // 11
+];
+  const fecha = new Date(anio)
+  let dia = fecha.getDate()
+  let anyo = fecha.getFullYear()
+  let mes = fecha.getMonth() 
+  let nombreMes = nombresMeses[mes]
+  let minutos = String(fecha.getMinutes()).padStart(2,0)
+  let horas = String(fecha.getHours()).padStart(2,0)
+  let apm = horas>= 12 ? 'AM' :'PM' 
+  
+  let resulado = dia+" de "+nombreMes+" de "+anyo+" "+horas+":"+minutos+" "+apm
+
+  console.log(resulado)
 }
