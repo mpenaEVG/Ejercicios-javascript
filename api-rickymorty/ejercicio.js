@@ -1,6 +1,3 @@
-'use strict'
-
-
 fetch("https://rickandmortyapi.com/api/character")
   .then(response =>{
       if(response.ok){
